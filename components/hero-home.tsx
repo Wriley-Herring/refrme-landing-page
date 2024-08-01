@@ -18,8 +18,8 @@ export default function HeroHome() {
               <Image
                 className="box-content"
                 src={RefrmeLogo}
-                width={300}
-                height={300}
+                width={301}
+                height={301}
                 alt="Refrme Logo"
               />
             </div>
