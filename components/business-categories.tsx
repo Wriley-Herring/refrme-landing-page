@@ -1,52 +1,80 @@
-import { ChatBubbleOvalLeftEllipsisIcon, UserPlusIcon, UsersIcon, CurrencyDollarIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+"use client";
 
-export default function Features() {
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { ChatBubbleOvalLeftEllipsisIcon, UserPlusIcon, CurrencyDollarIcon, ChartBarIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
+import PageIllustration from "@/components/page-illustration";
+import RefrmeLogo from "@/public/images/ReferMe_full.png"; // Adjust the path as needed
+
+interface FeatureSectionProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+  bgClass: string;
+}
+
+const FeatureSection: React.FC<FeatureSectionProps> = ({ icon: Icon, title, description, bgClass }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.7,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      console.log(`${title} is in view`);
+    }
+  }, [inView, title]);
+
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 md:pb-20">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-
-            {/* Feature 1 */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-              <ChatBubbleOvalLeftEllipsisIcon className="h-16 w-16 text-blue-500" />
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Quick Capture</h2>
-              <p className="mt-2 text-center text-gray-700">Easily capture new referrals and inbound leads by sharing your unique RefrMe link and QR code through text, email campaigns, business cards, and other marketing materials.</p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-              <UserPlusIcon className="h-16 w-16 text-blue-500" />
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Manage & Track</h2>
-              <p className="mt-2 text-center text-gray-700">Receive notifications directly to you for your sales team to take action. Easily manage ongoing referrals, see who referred them, ensure your customers are rewarded, and share your great work.</p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-            <CurrencyDollarIcon className="h-16 w-16 text-blue-500" />
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Incentives</h2>
-              <p className="mt-2 text-center text-gray-700">Showcase your referral incentive directly to your customers to drive inbound referrals and reward both your loyal and new customers.</p>
-            </div>
-
-            {/* Feature 4
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-              <CurrencyDollarIcon className="h-16 w-16 text-blue-500" />
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Automated Payouts</h2>
-              <p className="mt-2 text-center text-gray-700">Automate payouts to your customers for successful referrals, ensuring timely and accurate rewards.</p>
-            </div> */}
-
-            {/* Feature 5 */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-              <ChartBarIcon className="h-16 w-16 text-blue-500" />
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Insights</h2>
-              <p className="mt-2 text-center text-gray-700">Equip your sales team with a comprehensive dashboard to maximize the effectiveness of your referral program and drive continuous growth.</p>
-            </div>
-
-          </div>
+    <div className={`py-12 md:py-20 ${bgClass}`} ref={ref}>
+      <div className={`transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="flex flex-col items-center text-center">
+          <Icon className="h-20 w-20 text-blue-500" />
+          <h2 className="mt-4 text-3xl font-bold text-gray-900">{title}</h2>
+          <p className="mt-4 text-lg text-gray-700 max-w-3xl">{description}</p>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Features: React.FC = () => {
+  return (
+    <section className="bg-gray-50">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="text-center py-12">
+          <h1 className="text-4xl font-bold text-gray-900">Our Features</h1>
+          <ArrowDownIcon className="h-8 w-8 text-blue-500 mx-auto mt-4" />
+        </div>
+        <FeatureSection 
+          icon={ChatBubbleOvalLeftEllipsisIcon}
+          title="Quick Capture"
+          description="Easily capture new referrals and inbound leads by sharing your unique RefrMe link and QR code through text, email campaigns, business cards, and other marketing materials."
+          bgClass="bg-gray-50"
+        />
+        <FeatureSection 
+          icon={UserPlusIcon}
+          title="Manage & Track"
+          description="Receive notifications directly to your sales team to take action. Easily manage ongoing referrals, see who referred them, ensure your customers are rewarded, and share your great work."
+          bgClass="bg-white"
+        />
+        <FeatureSection 
+          icon={CurrencyDollarIcon}
+          title="Incentives"
+          description="Showcase your referral incentive directly to your customers to drive inbound referrals and reward both your loyal and new customers."
+          bgClass="bg-gray-50"
+        />
+        <FeatureSection 
+          icon={ChartBarIcon}
+          title="Insights"
+          description="Equip your sales team with a comprehensive dashboard to maximize the effectiveness of your referral program and drive continuous growth."
+          bgClass="bg-white"
+        />
       </div>
     </section>
   );
-}
+};
+
+export default Features;
 
 
