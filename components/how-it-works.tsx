@@ -43,9 +43,11 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative bg-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+    <section className="relative">
+
+    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      {/* Hero content */}
+      <div className="text-center pb-12 pt-32 md:pb-20 md:pt-40">
           <h2 className="text-5xl font-extrabold text-gray-900">How RefrMe Works</h2>
           <p className="mt-4 text-lg text-gray-600">
             Follow these simple steps to grow your business through effective referrals.

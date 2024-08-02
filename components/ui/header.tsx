@@ -71,7 +71,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-              <Link href="/how-it-works" className="text-gray-800 hover:text-gray-900">
+              <Link href="/how-it-works" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                 How it works
               </Link>
             </li>

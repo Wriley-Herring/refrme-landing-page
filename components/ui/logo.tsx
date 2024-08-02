@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import RefrmeLogo from "@/public/images/ReferMe_logo.png"; // Adjust the path as needed
+import RefrmeLogo from "@/public/images/ReferMe_full.png"; // Adjust the path as needed
 
 export default function Logo() {
   return (
@@ -8,8 +8,8 @@ export default function Logo() {
        <Image
                 className="box-content"
                 src={RefrmeLogo}
-                width={28}
-                height={28}
+                width={150}
+                height={150}
                 alt="Refrme Logo"
               />
     </Link>
