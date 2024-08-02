@@ -69,11 +69,11 @@ export default function Header() {
               Login
             </Link>
             <Link
-              href="https://app.refrme.io/sign-up"
-              className="px-4 py-2 rounded-md border border-gray-800 bg-gray-800 text-white shadow hover:bg-gray-900 transition duration-200"
-            >
-              Get Started
-            </Link>
+                href="https://app.refrme.io/sign-up"
+                className="px-4 py-2 rounded-md border border-blue-600 bg-blue-600 text-white shadow hover:bg-blue-700 transition duration-200"
+              >
+                Get Started
+              </Link>
             {/* Mobile menu button */}
             <button
               className="block md:hidden px-2 py-1 rounded border border-gray-300 bg-white text-gray-800 shadow"
