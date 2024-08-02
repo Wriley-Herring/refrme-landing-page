@@ -49,25 +49,25 @@ const Features: React.FC = () => {
         <FeatureSection 
           icon={ChatBubbleOvalLeftEllipsisIcon}
           title="Quick Capture"
-          description="Snap up referrals with your unique RefrMe link and QR code. Share it everywhere – texts, emails, business cards. Easy peasy!"
+          description="Snap up referrals with your unique RefrMe link and QR code. Share it everywhere – texts, emails, business cards. Easy peasy! ✨"
           bgClass="bg-gray-50"
         />
         <FeatureSection 
           icon={UserPlusIcon}
           title="Manage & Track"
-          description="Stay on top of referrals. Get notifications, track who sent what, and make sure your customers get the kudos they deserve."
+          description="Stay on top of referrals. Get notifications, track who sent what, and make sure your customers get the kudos they deserve. 📈"
           bgClass="bg-white"
         />
         <FeatureSection 
           icon={CurrencyDollarIcon}
           title="Incentives"
-          description="Show off your referral incentives. Reward loyal customers, attract new ones. Everybody wins!"
+          description="Show off your referral incentives. Reward loyal customers, attract new ones. Everybody wins! 🎉"
           bgClass="bg-gray-50"
         />
         <FeatureSection 
           icon={ChartBarIcon}
           title="Insights"
-          description="Your sales team’s secret weapon – a killer dashboard to boost your referral game and keep that growth train rolling."
+          description="Your sales team’s secret weapon – a killer dashboard to boost your referral game and keep that growth train rolling. 🚆 "
           bgClass="bg-white"
         />
       </div>
@@ -76,5 +76,6 @@ const Features: React.FC = () => {
 };
 
 export default Features;
+
 
 
