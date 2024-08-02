@@ -30,7 +30,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6">
             {[
               { href: "/", label: "Product" },
-              { href: "/how-it-works", label: "How it works" },
+              { href: "/how-it-works", label: "How it Works" },
               { href: "/pricing", label: "Pricing" },
               { href: "https://blog.refrme.io", label: "Blog" },
               { href: "https://sites.google.com/refrme.io/refrme-help-center/home?authuser=0", label: "Docs" },
@@ -46,7 +46,7 @@ export default function Header() {
             <ul className="absolute top-16 right-0 w-48 rounded border border-gray-300 bg-white shadow-lg md:hidden">
               {[
                 { href: "/", label: "Product" },
-                { href: "/how-it-works", label: "How it works" },
+                { href: "/how-it-works", label: "How it Works" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "https://blog.refrme.io/", label: "Blog" },
                 { href: "https://sites.google.com/refrme.io/refrme-help-center/home?authuser=0", label: "Docs" },

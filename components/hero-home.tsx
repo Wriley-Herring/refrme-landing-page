@@ -49,7 +49,7 @@ export default function HeroHome() {
                   onClick={() => setIsModalOpen(true)}
                 >
                   <PlayCircleIcon className="w-6 h-6 mr-2 text-blue-600" />
-                  Watch demo <span className="ml-2 text-gray-500">2 min</span>
+                  Watch demo <span className="ml-2 text-gray-500">3 min</span>
                 </button>
               </div>
             </div>

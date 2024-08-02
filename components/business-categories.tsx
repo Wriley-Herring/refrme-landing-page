@@ -16,7 +16,7 @@ interface FeatureSectionProps {
 const FeatureSection: React.FC<FeatureSectionProps> = ({ icon: Icon, title, description, bgClass }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.7,
+    threshold: 0.6,
   });
 
   useEffect(() => {

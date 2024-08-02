@@ -47,7 +47,7 @@ interface StepProps {
 const Step: React.FC<StepProps> = ({ icon: Icon, title, description, number }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.75,
+    threshold: 0.6,
   });
 
   useEffect(() => {
