@@ -49,25 +49,25 @@ const Features: React.FC = () => {
         <FeatureSection 
           icon={ChatBubbleOvalLeftEllipsisIcon}
           title="Quick Capture"
-          description="Easily capture new referrals and inbound leads by sharing your unique RefrMe link and QR code through text, email campaigns, business cards, and other marketing materials."
+          description="Snap up referrals with your unique RefrMe link and QR code. Share it everywhere – texts, emails, business cards. Easy peasy!"
           bgClass="bg-gray-50"
         />
         <FeatureSection 
           icon={UserPlusIcon}
           title="Manage & Track"
-          description="Receive notifications directly to your sales team to take action. Easily manage ongoing referrals, see who referred them, ensure your customers are rewarded, and share your great work."
+          description="Stay on top of referrals. Get notifications, track who sent what, and make sure your customers get the kudos they deserve."
           bgClass="bg-white"
         />
         <FeatureSection 
           icon={CurrencyDollarIcon}
           title="Incentives"
-          description="Showcase your referral incentive directly to your customers to drive inbound referrals and reward both your loyal and new customers."
+          description="Show off your referral incentives. Reward loyal customers, attract new ones. Everybody wins!"
           bgClass="bg-gray-50"
         />
         <FeatureSection 
           icon={ChartBarIcon}
           title="Insights"
-          description="Equip your sales team with a comprehensive dashboard to maximize the effectiveness of your referral program and drive continuous growth."
+          description="Your sales team’s secret weapon – a killer dashboard to boost your referral game and keep that growth train rolling."
           bgClass="bg-white"
         />
       </div>

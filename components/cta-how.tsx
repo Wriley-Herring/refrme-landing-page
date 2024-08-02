@@ -21,7 +21,7 @@ export default function Cta() {
               Referrals, simplified.
             </h2>
             <p className="mb-8 text-lg text-gray-300 md:text-xl">
-              Ready to kick referral chaos to the curb? Simplify your process and watch your business soar. Start your free trial today!
+            Ready to kick referral chaos to the curb? Simplify your process and watch your business soar. Start your free trial today!
             </p>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center gap-4">
               <a
@@ -32,14 +32,14 @@ export default function Cta() {
                   Start Free Trial
                 </span>
               </a>
-              <a
+              {/* <a
                 className="btn group mb-4 w-full bg-white text-gray-800 border border-gray-300 shadow hover:bg-gray-100 sm:mb-0 sm:w-auto"
                 href="/how-it-works"
               >
                 <span className="relative inline-flex items-center">
                   See How It Works
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -47,8 +47,6 @@ export default function Cta() {
     </section>
   );
 }
-
-
 
 
 

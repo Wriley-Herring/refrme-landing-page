@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { PlayCircleIcon } from '@heroicons/react/24/outline';
 import PageIllustration from "@/components/page-illustration";
 import RefrmeLogo from "@/public/images/ReferMe_full.png"; // Adjust the path as needed
@@ -23,7 +22,7 @@ export default function HeroHome() {
               data-aos-delay={150}
             >
               Supercharge Your <br className="hidden lg:block" />
-              <span className="text-blue-600">Referrals</span>
+              <span className="text-blue-600">Referrals⚡</span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -31,7 +30,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                RefrMe helps businesses streamline their referral acquisition process. Capture, manage, and track referrals with ease, while enjoying actionable insights and automated notifications.
+                Tired of referral chaos? RefrMe turns happy customers into your best promoters. Capture, track, and convert referrals effortlessly. Boom!
               </p>
               <div
                 className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
@@ -107,6 +106,8 @@ export default function HeroHome() {
     </section>
   );
 }
+
+
 
 
 
