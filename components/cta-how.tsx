@@ -32,14 +32,14 @@ export default function Cta() {
                   Start Free Trial
                 </span>
               </a>
-              {/* <a
+              <a
                 className="btn group mb-4 w-full bg-gray-100 text-gray-800 border border-gray-300 shadow-lg hover:bg-gray-200 hover:shadow-xl transition-all duration-300 sm:mb-0 sm:w-auto"
-                href="/how-it-works"
+                href="/pricing"
               >
                 <span className="relative inline-flex items-center">
-                  See How It Works
+                  Check out Pricing
                 </span>
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
