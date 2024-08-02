@@ -133,14 +133,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   Terms of service
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
                   href="/"
                 >
                   Report a vulnerability
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
