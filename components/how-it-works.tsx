@@ -77,7 +77,7 @@ export default function HowItWorks() {
   return (
     <section className="bg-gray-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center pt-24 pb-12">
+        <div className="text-center pt-36 pb-12">
           <h2 className="text-5xl font-extrabold text-gray-900">How RefrMe Works</h2>
           <p className="mt-4 text-lg text-gray-600">
             Follow these simple steps to grow your business through referrals.
