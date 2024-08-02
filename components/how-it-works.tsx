@@ -80,7 +80,7 @@ export default function HowItWorks() {
         <div className="text-center pt-36 pb-12">
           <h2 className="text-5xl font-extrabold text-gray-900">How RefrMe Works</h2>
           <p className="mt-4 text-lg text-gray-600">
-            Follow these simple steps to grow your business through referrals.
+          Effortlessly grow your business with our simple, powerful referral process
           </p>
         </div>
         {steps.map((step, index) => (
