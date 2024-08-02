@@ -1,6 +1,9 @@
 export const metadata = {
   title: "RefrMe",
   description: "Supercharge Your Referrals",
+  icons: {
+    icon: '/favicon.ico', // /public path
+  },
 };
 
 import Hero from "@/components/hero-home";
