@@ -33,7 +33,7 @@ export default function Header() {
               { href: "/how-it-works", label: "How it Works" },
               { href: "/pricing", label: "Pricing" },
               { href: "https://blog.refrme.io", label: "Blog" },
-              { href: "https://sites.google.com/refrme.io/refrme-help-center/home?authuser=0", label: "Docs" },
+              { href: "https://docs.refrme.io", label: "Docs" },
             ].map((link) => (
               <Link key={link.label} href={link.href} className="text-gray-800 hover:text-gray-900">
                 {link.label}
@@ -49,7 +49,7 @@ export default function Header() {
                 { href: "/how-it-works", label: "How it Works" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "https://blog.refrme.io/", label: "Blog" },
-                { href: "https://sites.google.com/refrme.io/refrme-help-center/home?authuser=0", label: "Docs" },
+                { href: "https://docs.refrme.io", label: "Docs" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
