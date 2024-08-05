@@ -1,6 +1,15 @@
 "use client";
 
 export default function Cta() {
+  const citations = (
+    <div className="text-left text-gray-600 mt-6 text-sm">
+      <p><sup id="cite1">[1]</sup> <a href="https://www.nielsen.com/us/en/insights/report/2012/consumer-trust-in-online-social-and-mobile-advertising/" target="_blank" className="text-blue-600">Nielsen: Consumer Trust in Online, Social, and Mobile Advertising (2012)</a></p>
+      <p><sup id="cite2">[2]</sup> <a href="https://www.nielsen.com/us/en/insights/report/2012/consumer-trust-in-online-social-and-mobile-advertising/" target="_blank" className="text-blue-600">Nielsen: Consumer Trust in Online, Social, and Mobile Advertising (2012)</a></p>
+      <p><sup id="cite3">[3]</sup> <a href="https://www.invespcro.com/blog/referral-marketing/" target="_blank" className="text-blue-600">Invesp: Referral Marketing Statistics (2021)</a></p>
+      <p><sup id="cite4">[4]</sup> <a href="https://www.ama.org/the-value-of-different-customer-segments/" target="_blank" className="text-blue-600">Journal of Marketing: The Value of Different Customer Segments (2012)</a></p>
+      <p><sup id="cite5">[5]</sup> <a href="https://knowledge.wharton.upenn.edu/article/viral-marketing-the-science-of-sharing/" target="_blank" className="text-blue-600">Wharton School of Business: Viral Marketing: The Science of Sharing (2011)</a></p>
+    </div>
+  );
   return (
     <section className="relative bg-white py-12 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -44,6 +53,7 @@ export default function Cta() {
           </div>
         </div>
       </div>
+      {citations}
     </section>
   );
 }

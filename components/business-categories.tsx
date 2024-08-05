@@ -39,6 +39,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ icon: Icon, title, desc
 };
 
 const Features: React.FC = () => {
+  
   return (
     <section className="bg-gray-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">

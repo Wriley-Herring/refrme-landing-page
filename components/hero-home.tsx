@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { PlayCircleIcon } from '@heroicons/react/24/outline';
+import { PlayCircleIcon, ChartBarIcon, UsersIcon, CheckCircleIcon, CurrencyDollarIcon, ArrowTrendingUpIcon, ClipboardDocumentListIcon, BellIcon, ChartPieIcon } from '@heroicons/react/24/outline';
 import PageIllustration from "@/components/page-illustration";
 import RefrmeLogo from "@/public/images/ReferMe_full.png"; // Adjust the path as needed
+
+
 
 export default function HeroHome() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,7 +55,91 @@ export default function HeroHome() {
               </div>
             </div>
           </div>
-          {/* Hero image */}
+        </div>
+        {/* Why Referrals Matter Section */}
+        <div className="py-12 text-center bg-gray-50 md:py-20">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-6 text-4xl font-bold text-gray-900">Why Referrals Matter</h2>
+            <p className="mb-8 text-lg text-gray-700">
+              Referrals are the lifeblood of any growing business. They’re cost-effective, have higher conversion rates, and build trust more quickly than any other marketing channel.
+            </p>
+            <div className="space-y-12">
+              <div className="flex flex-col items-center md:flex-row md:space-x-4" data-aos="fade-up" data-aos-delay={100}>
+                <ChartBarIcon className="w-12 h-12 text-blue-600" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">High Conversion Rates</h3>
+                  <p className="text-lg text-gray-700">Referred customers are 4x more likely to convert <sup><a href="#cite1" className="text-blue-600">[1]</a></sup>.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center md:flex-row md:space-x-4" data-aos="fade-up" data-aos-delay={200}>
+                <UsersIcon className="w-12 h-12 text-blue-600" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Trust and Credibility</h3>
+                  <p className="text-lg text-gray-700">92% of consumers trust referrals from people they know <sup><a href="#cite2" className="text-blue-600">[2]</a></sup>.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center md:flex-row md:space-x-4" data-aos="fade-up" data-aos-delay={300}>
+                <CheckCircleIcon className="w-12 h-12 text-blue-600" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Cost-Effective</h3>
+                  <p className="text-lg text-gray-700">Referral marketing reduces your customer acquisition costs significantly <sup><a href="#cite3" className="text-blue-600">[3]</a></sup>.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center md:flex-row md:space-x-4" data-aos="fade-up" data-aos-delay={400}>
+                <CurrencyDollarIcon className="w-12 h-12 text-blue-600" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Higher Lifetime Value</h3>
+                  <p className="text-lg text-gray-700">Referred customers have a 16% higher lifetime value <sup><a href="#cite4" className="text-blue-600">[4]</a></sup>.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center md:flex-row md:space-x-4" data-aos="fade-up" data-aos-delay={500}>
+                <ArrowTrendingUpIcon className="w-12 h-12 text-blue-600" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Accelerated Growth</h3>
+                  <p className="text-lg text-gray-700">Businesses with referral programs grow 86% faster <sup><a href="#cite5" className="text-blue-600">[5]</a></sup>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* How RefrMe Helps Section */}
+        <div className="py-12 bg-white md:py-20">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-6 text-4xl font-bold text-gray-900">How RefrMe Helps Your Business Grow</h2>
+            <p className="mb-8 text-lg text-gray-700">
+              RefrMe is designed to help your business harness the power of referrals effortlessly. Here's how:
+            </p>
+            <div className="space-y-8 text-left">
+              <div className="flex items-center" data-aos="fade-right" data-aos-delay={100}>
+                <ClipboardDocumentListIcon className="w-12 h-12 text-blue-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Streamline Referral Collection</h3>
+                  <p className="text-lg text-gray-700">Capture referrals with ease using unique links and QR codes. Share them via texts, emails, and business cards to spread the word far and wide.</p>
+                </div>
+              </div>
+              <div className="flex items-center" data-aos="fade-left" data-aos-delay={200}>
+                <BellIcon className="w-12 h-12 text-blue-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Real-Time Tracking and Management</h3>
+                  <p className="text-lg text-gray-700">Stay on top of your referrals with instant notifications. Track every referral, ensuring no opportunity slips through the cracks.</p>
+                </div>
+              </div>
+              <div className="flex items-center" data-aos="fade-right" data-aos-delay={300}>
+                <CurrencyDollarIcon className="w-12 h-12 text-blue-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Incentivize and Reward</h3>
+                  <p className="text-lg text-gray-700">Create compelling referral incentives. Reward your loyal customers and motivate them to bring in new business.</p>
+                </div>
+              </div>
+              <div className="flex items-center" data-aos="fade-left" data-aos-delay={400}>
+                <ChartPieIcon className="w-12 h-12 text-blue-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Gain Actionable Insights</h3>
+                  <p className="text-lg text-gray-700">Leverage our powerful dashboard to gain insights into your referral program. Use data-driven decisions to optimize and grow your business.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {isModalOpen && (
@@ -106,6 +192,9 @@ export default function HeroHome() {
     </section>
   );
 }
+
+
+
 
 
 
