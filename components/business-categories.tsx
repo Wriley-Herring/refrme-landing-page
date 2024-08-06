@@ -44,7 +44,7 @@ const Features: React.FC = () => {
     <section className="bg-gray-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center py-12">
-          <h1 className="text-4xl font-bold text-gray-900">Our Features</h1>
+          <h2 className="text-4xl font-bold text-gray-900">Our Features</h2>
           <ArrowDownIcon className="h-8 w-8 text-blue-500 mx-auto mt-4" />
         </div>
         <FeatureSection 
