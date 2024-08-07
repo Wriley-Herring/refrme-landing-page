@@ -31,6 +31,7 @@ export default function Header() {
             {[
               { href: "/", label: "Product" },
               { href: "/how-it-works", label: "How it Works" },
+              { href: "/referral-effect", label: "Referral Effect" },
               { href: "/pricing", label: "Pricing" },
               { href: "https://blog.refrme.io", label: "Blog" },
               { href: "https://docs.refrme.io", label: "Docs" },
@@ -47,6 +48,7 @@ export default function Header() {
               {[
                 { href: "/", label: "Product" },
                 { href: "/how-it-works", label: "How it Works" },
+                { href: "/referral-effect", label: "Referral Effect" },
                 { href: "/pricing", label: "Pricing" },
                 { href: "https://blog.refrme.io/", label: "Blog" },
                 { href: "https://docs.refrme.io", label: "Docs" },

@@ -81,6 +81,7 @@ const plans = [
 
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState('monthly');
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -139,6 +140,56 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+      <button
+        className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:from-blue-600 hover:to-teal-500 transition transform hover:scale-105"
+        onClick={() => setIsDemoModalOpen(true)}
+      >
+        Schedule a Demo
+      </button>
+      {isDemoModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={() => setIsDemoModalOpen(false)}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Request a Demo</h2>
+            <div style={{ position: 'relative', paddingBottom: 'calc(56.458333333333336% + 50px)', height: '0' }}>
+              <iframe
+                src="https://tally.so/embed/mVVJJa"
+                width="100%"
+                height="100%"
+                style={{ position: 'absolute', border: 'none' }}
+                scrolling="yes"
+                allow="clipboard-read clipboard-write"
+                allowFullScreen
+                allowTransparency={true}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+
+        .request-demo-button {
+          transition: transform 0.5s;
+        }
+
+        .request-demo-button:hover {
+          transform: scale(1.1);
+        }
+      `}</style>
     </section>
   );
 }

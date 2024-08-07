@@ -5,10 +5,9 @@ import { PlayCircleIcon, ChartBarIcon, UsersIcon, CheckCircleIcon, CurrencyDolla
 import PageIllustration from "@/components/page-illustration";
 import RefrmeLogo from "@/public/images/ReferMe_full.png"; // Adjust the path as needed
 
-
-
 export default function HeroHome() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   return (
     <section className="relative bg-white">
@@ -47,15 +46,16 @@ export default function HeroHome() {
                 </a>
                 <button
                   className="flex watch-demo-button items-center justify-center w-full text-gray-800 hover:text-gray-900 sm:ml-4 sm:w-auto"
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => setIsVideoModalOpen(true)}
                 >
                   <PlayCircleIcon className="w-6 h-6 mr-2 text-blue-600" />
-                  Watch demo <span className="ml-2 text-gray-500">2 min</span>
+                  Watch Demo <span className="ml-2 text-gray-500">2 min</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
+
         {/* Why Referrals Matter Section */}
         <div className="py-12 text-center bg-gray-50 md:py-20">
           <div className="mx-auto max-w-3xl">
@@ -102,6 +102,7 @@ export default function HeroHome() {
             </div>
           </div>
         </div>
+
         {/* How RefrMe Helps Section */}
         <div className="py-12 bg-white md:py-20">
           <div className="mx-auto max-w-3xl text-center">
@@ -142,12 +143,13 @@ export default function HeroHome() {
           </div>
         </div>
       </div>
-      {isModalOpen && (
+
+      {isVideoModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-lg max-w-3xl w-full relative">
             <button
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => setIsVideoModalOpen(false)}
             >
               <svg
                 className="w-4 h-4"
@@ -160,23 +162,63 @@ export default function HeroHome() {
               </svg>
             </button>
             <div style={{ position: 'relative', paddingBottom: 'calc(56.458333333333336% + 50px)', height: '0' }}>
-                <iframe
-                    id="er5zqx4ilr"
-                    src="https://app.guideflow.com/embed/er5zqx4ilr"
-                    width="100%"
-                    height="100%"
-                    style={{ overflow: 'hidden', position: 'absolute', border: 'none' }}
-                    scrolling="no"
-                    allow="clipboard-read clipboard-write"
-                    allowFullScreen
-                    allowTransparency={true}
-                ></iframe>
+              <iframe
+                id="er5zqx4ilr"
+                src="https://app.guideflow.com/embed/er5zqx4ilr"
+                width="100%"
+                height="100%"
+                style={{ overflow: 'hidden', position: 'absolute', border: 'none' }}
+                scrolling="no"
+                allow="clipboard-read clipboard-write"
+                allowFullScreen
+                allowTransparency={true}
+              ></iframe>
             </div>
-
-
           </div>
         </div>
       )}
+
+      <button
+        className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:from-blue-600 hover:to-teal-500 transition transform hover:scale-105"
+        onClick={() => setIsDemoModalOpen(true)}
+      >
+        Schedule a Demo
+      </button>
+
+      {isDemoModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={() => setIsDemoModalOpen(false)}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Request a Demo</h2>
+            <div style={{ position: 'relative', paddingBottom: 'calc(56.458333333333336% + 50px)', height: '0' }}>
+              <iframe
+                src="https://tally.so/embed/mVVJJa"
+                width="100%"
+                height="100%"
+                style={{ position: 'absolute', border: 'none' }}
+                scrolling="yes"
+                allow="clipboard-read clipboard-write"
+                allowFullScreen
+                allowTransparency={true}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
         @keyframes pulse {
           0%, 100% {
@@ -195,10 +237,19 @@ export default function HeroHome() {
         .watch-demo-button:hover {
           transform: scale(1.1);
         }
+
+        .request-demo-button {
+          transition: transform 0.5s;
+        }
+
+        .request-demo-button:hover {
+          transform: scale(1.1);
+        }
       `}</style>
     </section>
   );
 }
+
 
 
 

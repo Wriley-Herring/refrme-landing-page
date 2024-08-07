@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import PageIllustration from "@/components/page-illustration";
 import { TagIcon, UserIcon, ShareIcon, ChartBarIcon, BellIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 const steps = [
@@ -74,15 +75,25 @@ const Step: React.FC<StepProps> = ({ icon: Icon, title, description, number, bgC
 };
 
 export default function HowItWorks() {
+    const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   return (
-    <section className="bg-gray-50">
+    <section className="relative bg-white">
+      <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center pt-36 pb-12">
-          <h2 className="text-5xl font-extrabold text-gray-900">How RefrMe Works</h2>
-          <p className="mt-4 text-lg text-gray-600">
-          Effortlessly grow your business with our simple, powerful referral process
-          </p>
-        </div>
+        {/* Referral Effect content */}
+        <div className="pb-12 pt-40 md:pb-20 md:pt-64">
+          {/* Section header */}
+          <div className="pb-12 text-center md:pb-16">
+            <h1 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl" data-aos="zoom-y-out" data-aos-delay={150}>
+                How RefrMe <br className="hidden lg:block" />
+              <span className="text-blue-600">Works🔧</span>
+            </h1>
+            <div className="mx-auto max-w-3xl">
+              <p className="mb-8 text-lg text-gray-700 md:text-xl" data-aos="zoom-y-out" data-aos-delay={300}>
+              Effortlessly grow your business with our simple, powerful referral process
+              </p>
+            </div>
+          </div>
         {steps.map((step, index) => (
           <Step 
             key={index}
@@ -94,6 +105,57 @@ export default function HowItWorks() {
           />
         ))}
       </div>
+      </div>
+      <button
+        className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:from-blue-600 hover:to-teal-500 transition transform hover:scale-105"
+        onClick={() => setIsDemoModalOpen(true)}
+      >
+        Schedule a Demo
+      </button>
+      {isDemoModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={() => setIsDemoModalOpen(false)}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Request a Demo</h2>
+            <div style={{ position: 'relative', paddingBottom: 'calc(56.458333333333336% + 50px)', height: '0' }}>
+              <iframe
+                src="https://tally.so/embed/mVVJJa"
+                width="100%"
+                height="100%"
+                style={{ position: 'absolute', border: 'none' }}
+                scrolling="yes"
+                allow="clipboard-read clipboard-write"
+                allowFullScreen
+                allowTransparency={true}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+
+        .request-demo-button {
+          transition: transform 0.5s;
+        }
+
+        .request-demo-button:hover {
+          transform: scale(1.1);
+        }
+      `}</style>
     </section>
   );
 }
