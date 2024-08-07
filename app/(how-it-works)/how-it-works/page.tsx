@@ -3,7 +3,7 @@ import HowItWorks from "@/components/how-it-works";
 import Cta from "@/components/cta-how";
 
 export const metadata = {
-  title: "RefrMe - Seamless Referral Management Software",
+  title: "RefrMe - How it Works",
   description: "Boost your business growth with RefrMe's seamless referral management software. Streamline referrals, manage incentives, and track performance easily.",
 };
 

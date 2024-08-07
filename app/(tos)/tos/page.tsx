@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Pricing from "@/components/pricing";
+import TOS from "@/components/tos";
 
 export const metadata = {
-  title: "RefrMe - Pricing",
+  title: "RefrMe - Terms of Service",
   description: "Boost your business growth with RefrMe's seamless referral management software. Streamline referrals, manage incentives, and track performance easily.",
 };
 
@@ -35,7 +35,7 @@ export default function Home() {
           }}
         />
       </Head>
-      <Pricing />
+      <TOS />
       {/* <FeaturesPlanet />
       <LargeTestimonial />
       <Cta /> */}
