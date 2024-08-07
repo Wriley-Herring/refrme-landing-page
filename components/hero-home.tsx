@@ -50,7 +50,7 @@ export default function HeroHome() {
                   onClick={() => setIsModalOpen(true)}
                 >
                   <PlayCircleIcon className="w-6 h-6 mr-2 text-blue-600" />
-                  Watch demo <span className="ml-2 text-gray-500">3 min</span>
+                  Watch demo <span className="ml-2 text-gray-500">2 min</span>
                 </button>
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function HeroHome() {
               onClick={() => setIsModalOpen(false)}
             >
               <svg
-                className="w-6 h-6"
+                className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -159,14 +159,21 @@ export default function HeroHome() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
-            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-              <iframe
-                src="https://www.loom.com/embed/484a027a8351452ab143ca4335ff4b12?sid=d2011695-1102-4f71-bb5a-f69eb3c82432"
-                frameBorder="0"
-                allow="fullscreen"
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              ></iframe>
+            <div style={{ position: 'relative', paddingBottom: 'calc(56.458333333333336% + 50px)', height: '0' }}>
+                <iframe
+                    id="er5zqx4ilr"
+                    src="https://app.guideflow.com/embed/er5zqx4ilr"
+                    width="100%"
+                    height="100%"
+                    style={{ overflow: 'hidden', position: 'absolute', border: 'none' }}
+                    scrolling="no"
+                    allow="clipboard-read clipboard-write"
+                    allowFullScreen
+                    allowTransparency={true}
+                ></iframe>
             </div>
+
+
           </div>
         </div>
       )}
@@ -176,7 +183,7 @@ export default function HeroHome() {
             transform: scale(1);
           }
           50% {
-            transform: scale(1.1);
+            transform: scale(1.03);
           }
         }
 
